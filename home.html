@@ -8,6 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      #transaction p {
+        font-size: 20px;
+        background-color: aqua;
+        padding: 14px;
+        margin: 8px;
+        text-align: center;
+
+      }
+    </style>
 </head>
 
 <body>
@@ -49,7 +59,7 @@
                 <img src="assets/purse1.png" alt="">
                 <p class="text-xl">Pay Bill</p>
             </div>
-            <div class="flex flex-col items-center gap-2 border p-4 rounded-md shadow-lg">
+            <div id="box-transaction" class="flex flex-col items-center gap-2 border p-4 rounded-md shadow-lg">
                 <img src="assets/transaction1.png" alt="">
                 <p class="text-xl">Transaction</p>
             </div>
@@ -76,7 +86,7 @@
                         <label class="label">
                           <span class="label-text font-bold">Bank Account Number</span>
                         </label>
-                        <input id="account-number" type="number" placeholder="11 digit bank account number" class="input input-bordered" required />
+                        <input id="addmoney-account" type="number" placeholder="11 digit bank account number" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
@@ -148,7 +158,7 @@
                         <label class="label">
                           <span class="label-text font-bold">User Account</span>
                         </label>
-                        <input id="account-number" type="number" placeholder="11 digit bank account number" class="input input-bordered" required />
+                        <input id="transfer-account" type="number" placeholder="11 digit bank account number" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
@@ -172,9 +182,22 @@
                 
               </div>
         </section>
+        <section id="transaction" class="hidden">
+          <h1 class="text-3xl text-red-500 font-bold mb-4 border-b">Transaction History</h1>
+
+          <p>hello this is test</p>
+          <div id="history">
+
+            
+
+          </div>
+        </section>
     </main>
     <script src="script/uitility.js"></script>
     <script src="script/addMoney.js"></script>
+    <script src="script/toggle.js"></script>
+    <script src="script/cashOut.js"></script>
+    <script src="script/transfer.js"></script>
 </body>
 
 </html>
