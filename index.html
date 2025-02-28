@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoo Bank || Get unlimited Money</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <header class="max-w-md min-h-screen mx-auto">
+    <nav>
+      <div class="logo mt-40 flex flex-col items-center justify-center ">
+        <img class="w-60" src="assets/bg.png" alt="">
+        <img class="w-20 h-20 -mt-50" src="assets/Group.png" alt="">
+      </div>
+    </nav>
+    <form class="hero">
+      <div class=" w-full max-w-screen-md  shrink-0 shadow-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="fieldset-label font-bold text-xl">Phone</label>
+            <input value= "01732717047" id="account-number"  type="text" class="input w-full p-5 rounded-xl text-xl" placeholder="input phone number"
+              required />
+            <label class="fieldset-label font-bold text-xl">4 Digit Pin</label>
+            <input id="account-password" value="1234" type="password" class="input w-full p-5 rounded-xl text-xl" placeholder="input 4 digit pin"
+              required />
+            <div><a class="link link-hover">Forgot password?</a></div>
+            <button id="btn-login" class="btn btn-neutral mt-4">Login</button>
+          </fieldset>
+        </div>
+      </div>
+
+    </form>
+  </header>
+<script src="script/uitility.js"></script>
+  <script src="script/login.js"></script>
+</body>
+
+</html>

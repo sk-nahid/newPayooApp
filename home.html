@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="max-w-md mx-auto"> 
+        <nav class="flex justify-between items-center border-b ">
+            <div class="flex items-center gap-4 mb-4">
+                <img src="assets/Group.png" alt="">
+                <div>
+                    <p class="font-bold text-3xl"><span id="main-balance">4000</span>$</p>
+                    <p>Available Balance</p>
+                </div>
+            </div>
+            <button class=" p-4 rounded-sm shadow-md "><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+        </nav>
+    </header>
+    <main class="max-w-md mx-auto ">
+        <section class="mt-6">
+            <h1 class="text-4xl font-bold ">🔥 Welcome to Payooo!</h1>
+            <p class="font-thin text-xl mt-4">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        </section>
+        <section class="grid grid-cols-3 gap-4 py-8">
+            <div id="box-add-money" class="flex flex-col items-center gap-2 border p-4 rounded-md shadow-lg">
+                <img src="assets/wallet1.png" alt="">
+                <p class="text-xl">Add Money</p>
+            </div>
+            <div id="box-cash-out" class="flex flex-col items-center gap-2 border p-4 rounded-md shadow-lg">
+                <img src="assets/send1.png" alt="">
+                <p class="text-xl">Cashout</p>
+            </div>
+            <div id="box-transfer-money" class="flex flex-col items-center gap-2 border p-4 rounded-md shadow-lg"> 
+                <img src="assets/money1.png" alt="">
+                <p class="text-xl ">Transfer</p>
+            </div>
+            <div class="flex flex-col items-center gap-2 border p-4 rounded-md shadow-lg">
+                <img src="assets/bonus1.png" alt="">
+                <p class="text-xl">Get Bonus</p>
+            </div>
+            <div class="flex flex-col items-center gap-2 border p-4 rounded-md shadow-lg">
+                <img src="assets/purse1.png" alt="">
+                <p class="text-xl">Pay Bill</p>
+            </div>
+            <div class="flex flex-col items-center gap-2 border p-4 rounded-md shadow-lg">
+                <img src="assets/transaction1.png" alt="">
+                <p class="text-xl">Transaction</p>
+            </div>
+            
+        </section>
+        <section id="add-money" class="bg-base-200 py-8">
+            <h1 class="text-2xl font-bold mb-6 pl-4">Add money</h1>
+            <div class="hero ">
+                
+                  
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label mb-1">
+                            <span class="label-text font-bold">Select Bank</span>
+                        </label>
+                        <select class="select select-bordered w-full max-w-xs mb-1">
+                            
+                            <option disabled selected>Select A Bank</option>
+                            <option value="bkash">Bkash</option>
+                            <option value="nagad">Nagad</option>
+                            <option value="roket">Rotek</option>
+                          </select>
+                        <label class="label">
+                          <span class="label-text font-bold">Bank Account Number</span>
+                        </label>
+                        <input id="account-number" type="number" placeholder="11 digit bank account number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Amount to Add</span>
+                        </label>
+                        <input id="add-amount" type="number" placeholder="amount to add" class="input input-bordered" required />
+                    
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Pin Number</span>
+                        </label>
+                        <input id="add-money-pin" type="number" placeholder="4 digit pin"  class="input input-bordered" required />
+                    
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="btn-add-money" class="btn btn-primary w-full">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                
+              </div>
+        </section>
+        <section id="cash-out" class="bg-base-200 py-8 hidden ">
+            <h1 class="text-2xl font-bold mb-6 pl-4">Cash Out</h1>
+            <div class="hero ">
+                
+                  
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        
+                        <label class="label">
+                          <span class="label-text font-bold">Agent Number</span>
+                        </label>
+                        <input id="cashout-account-number" type="number" placeholder="11 digit bank account number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Amount</span>
+                        </label>
+                        <input id="cashout-amount" type="number" placeholder="amount to add" class="input input-bordered" required />
+                    
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Pin Number</span>
+                        </label>
+                        <input id="cashout-pin" type="number" placeholder="4 digit pin" class="input input-bordered" required />
+                    
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="btn-cash-out" class="btn btn-primary w-full">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+                
+              </div>
+        </section>
+        <section id="transfer-money" class="bg-base-200 py-8 hidden ">
+            <h1 class="text-2xl font-bold mb-6 pl-4">Transfer Money </h1>
+            <div class="hero ">
+                
+                  
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        
+                        <label class="label">
+                          <span class="label-text font-bold">User Account</span>
+                        </label>
+                        <input id="account-number" type="number" placeholder="11 digit bank account number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Amount</span>
+                        </label>
+                        <input id="transfer-amount" type="number" placeholder="amount to add" class="input input-bordered" required />
+                    
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Pin Number</span>
+                        </label>
+                        <input id="transfer-pin" type="number" placeholder="4 digit pin" class="input input-bordered" required />
+                    
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="btn-transfer-money" class="btn btn-primary w-full">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                
+              </div>
+        </section>
+    </main>
+    <script src="script/uitility.js"></script>
+    <script src="script/addMoney.js"></script>
+</body>
+
+</html>
